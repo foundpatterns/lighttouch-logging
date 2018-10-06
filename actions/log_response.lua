@@ -1,7 +1,7 @@
 event: ["logResponse"]
 priority: 1
 
-local debug = require "utils.debug"
+local debug = require "debug"
 
 
 local uuid_saved = debug.uuid_return()

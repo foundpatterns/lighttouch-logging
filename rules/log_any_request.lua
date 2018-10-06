@@ -1,1 +1,1 @@
-events["request_received"]:trigger(req)
+events["logRequest"]:trigger(req)

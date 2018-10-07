@@ -1,6 +1,6 @@
 event: ["logResponse"]
 priority: 1
-
+print("logging response")
 local debug = require "debug"
 
 

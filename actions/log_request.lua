@@ -1,6 +1,6 @@
 event: ["logRequest"]
 priority: 1
-
+print("logging request")
 local debug = require "debug"
 
 local uuid_saved = debug.uuid_return()    

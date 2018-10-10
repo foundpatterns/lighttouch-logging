@@ -1,0 +1,1 @@
+events["logResponse"]:trigger(req)

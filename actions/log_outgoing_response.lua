@@ -1,4 +1,4 @@
-event: ["resProcess"]
+event: ["outgoing_response_sent"]
 priority: 1
 
 local debug = require "debug"

@@ -1,4 +1,4 @@
-event: ["logRequest"]
+event: ["incoming_request_received"]
 priority: 1
 
 local debug = require "debug"

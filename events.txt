@@ -1,2 +1,4 @@
-logRequest
-logResponse
+incoming_request_received
+outgoing_response_sent
+outgoing_request_sent
+incoming_response_received

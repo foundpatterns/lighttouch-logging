@@ -1,1 +1,2 @@
-events["logRequest"]:trigger(req)
+priority: 1
+events["logRequest"]:trigger(request)

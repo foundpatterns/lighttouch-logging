@@ -6,13 +6,12 @@ local debug = require "debug"
 
 local uuid_saved = debug.uuid_return()
 
-local res = torchbear_response
-if not res then
-  log.warn("no torchbear_response")
+if not response then
+  log.error("response_process trigerred but no response available")
   return
 end
 
-local log_text = debug.print_res_info_return(res)
+local log_text = debug.print_res_info_return(response)
 os.execute("mkdir -p log/response")
 local log_file = io.open("log/response/" .. uuid_saved, "w")
 

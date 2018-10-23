@@ -1,6 +1,4 @@
 
-local debug = require "debug"
-
 local helpers = {}
 
 function helpers.send_request (request)
@@ -8,15 +6,9 @@ function helpers.send_request (request)
 
   local log_text
   if type(request) == "string" then
-    log_text = "GET " .. request .. "\nHeaders:\nBody:\n"
+    log_text = yaml.dump({uri = request})
   else
-    log_text = (request.method or "GET") .. " " .. request.uri .. "\nHeaders:\n"
-    if request.headers then
-      for k, v in pairs(request.headers) do
-        log_text = log_text .. "\t" .. k .. ": " .. v .. "\n"
-      end
-    end
-    log_text = log_text .. "Body:\n" .. (request.body or "")
+    log_text = yaml.dump(request)
   end
 
   os.execute("mkdir -p log/outgoing-request")
@@ -27,13 +19,7 @@ function helpers.send_request (request)
   local response = client_request.send(request)
 
   
-  local log_text = response.status .. " " .. (request.uri or request) .. "\nHeaders:\n"
-  if response.headers then
-    for k, v in pairs(response.headers) do
-      log_text = log_text .. "\t" .. k .. ": " .. v .. "\n"
-    end
-  end
-  log_text = log_text .. "Body:\n" .. response.body_raw
+  local log_text = yaml.dump(response)
 
   os.execute("mkdir -p log/incoming-response")
   local log_file = io.open("log/incoming-response/" .. uuid_saved, "w")

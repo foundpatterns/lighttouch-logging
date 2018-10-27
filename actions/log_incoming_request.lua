@@ -3,7 +3,7 @@ priority: 1
 
 local uuid_saved = uuid.v4()
 
-local log_text = yaml.dump(request)
+local log_text = yaml.from_table(request)
 os.execute("mkdir -p log/incoming-request")
 local log_file = io.open("log/incoming-request/" .. uuid_saved, "w")
 

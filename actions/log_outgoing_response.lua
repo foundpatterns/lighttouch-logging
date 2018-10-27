@@ -7,7 +7,7 @@ if not response then
 end
 
 local uuid_saved = uuid.v4()
-local log_text = yaml.decode(response)
+local log_text = yaml.from_table(response)
 os.execute("mkdir -p log/outgoing-response")
 local log_file = io.open("log/outgoing-response/" .. uuid_saved, "w")
 

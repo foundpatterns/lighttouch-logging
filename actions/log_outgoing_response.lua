@@ -8,7 +8,7 @@ end
 
 local uuid_saved = uuid.v4()
 local log_text = yaml.from_table(response)
-os.execute("mkdir -p log/outgoing-response")
+fs.create_dir("log/outgoing-response", true)
 local log_file = io.open("log/outgoing-response/" .. uuid_saved, "w")
 
 log_file:write(log_text)

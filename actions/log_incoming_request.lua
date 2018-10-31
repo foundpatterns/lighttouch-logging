@@ -1,5 +1,7 @@
 event: ["incoming_request_received"]
 priority: 1
+input_parameters: ["request"]
+
 
 local uuid_saved = uuid.v4()
 

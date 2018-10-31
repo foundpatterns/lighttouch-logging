@@ -1,6 +1,6 @@
 event: ["outgoing_response_about_to_be_sent"]
 priority: 1
-input_parameters: ["request"]
+input_parameters: []
 
 if not response then
   log.error("outgoing_response_about_to_be_sent trigerred but no response available")

@@ -11,3 +11,5 @@ local log_file = io.open("log/incoming-request/" .. uuid_saved, "w")
 
 log_file:write(log_text)
 log_file:close()
+
+log.info("Logged incoming request as " .. uuid_saved)

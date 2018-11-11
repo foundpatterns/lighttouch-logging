@@ -2,9 +2,9 @@ event: ["incoming_request_received"]
 priority: 1
 input_parameters: ["request"]
 
-local log_text = yaml.from_table(request)
-fs.create_dir("log/incoming-request", true)
-local log_file = io.open("log/incoming-request/" .. request.uuid, "w")
+local fields = table.copy(request)
+fields.model = "incoming-request"
+fields.body = nil
+fields.body_raw = nil
 
-log_file:write(log_text)
-log_file:close()
+content.write_file("incoming-request", request.uuid, fields, request.body_raw)

@@ -1,6 +1,6 @@
-event: ["incoming_request_received"]
-priority: 1
-input_parameters: ["request"]
+event = ["incoming_request_received"]
+priority = 1
+input_parameters = ["request"]
 
 local fields = table.copy(request)
 fields.model = "incoming-request"

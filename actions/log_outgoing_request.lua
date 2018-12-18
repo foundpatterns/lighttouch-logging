@@ -1,6 +1,6 @@
-event: ["outgoing_request_about_to_be_sent"]
-priority: 1
-input_parameters: ["request"]
+event = ["outgoing_request_about_to_be_sent"]
+priority = 1
+input_parameters = ["request"]
 
 local fields = table.copy(request)
 fields.model = "outgoing-request"

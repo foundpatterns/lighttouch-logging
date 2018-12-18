@@ -1,6 +1,6 @@
-event: ["request_log"]
-priority: 1
-input_parameters: ["request"]
+event = ["request_log"]
+priority = 1
+input_parameters = ["request"]
 
 local log_uuid = request.path_segments[2]
 

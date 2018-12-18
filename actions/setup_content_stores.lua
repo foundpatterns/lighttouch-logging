@@ -1,6 +1,6 @@
-event: ["lighttouch_loaded"]
-priority: 50
-input_parameters: []
+event = ["lighttouch_loaded"]
+priority = 50
+input_parameters = []
 
 local stores = {"incoming-request", "incoming-response", "outgoing-request", "outgoing-response"}
 

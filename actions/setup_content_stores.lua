@@ -6,6 +6,6 @@ local stores = {"incoming-request", "incoming-response", "outgoing-request", "ou
 
 for _, id in pairs(stores) do
   local dir = "log/" .. id .. "/"
-  content.stores[id] = dir
+  contentdb.stores[id] = dir
   fs.create_dir(dir, true)
 end

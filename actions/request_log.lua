@@ -4,7 +4,7 @@ input_parameters = ["request"]
 
 local log_uuid = request.path_segments[2]
 
-local path = content.get_document_path(log_uuid, "incoming_request")
+local path = contentdb.get_document_path(log_uuid, "incoming_request")
 
 if not path then
   return {

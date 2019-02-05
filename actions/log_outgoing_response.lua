@@ -7,4 +7,4 @@ fields.model = "outgoing-response"
 fields.body = nil
 fields.body_raw = nil
 
-content.write_file("outgoing-response", response.uuid, fields, response.body_raw)
+contentdb.write_file("outgoing-response", response.uuid, fields, response.body_raw)
